@@ -1,0 +1,131 @@
+<!-- <h1>Profile</h1>
+<p>Name: {{ user.username }}</p>
+<p>Nominee Name: {{ user.nominee_name }}</p>
+<p>Mobile Number: {{ user.mobile_number }}</p>
+<p>DOB: {{ user.dob }}</p>
+<p>Age: {{ user.age }}</p>
+<p>Photo: <img src="{{ user.photo.url }}" alt="Profile Photo"></p>
+<p>Random ID: {{ user.profile.random_id }}</p> -->
+<head>
+    <style>
+.profile-card {
+    width: 950px;
+    height: 720px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    display: flex; /* Add this line to use flexbox */
+    justify-content: center; 
+  }
+  
+  .profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-photo {
+    width: 245px;
+    height: 275px;
+    border-radius: 5px;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+  
+  .profile-body {
+    padding: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  td:first-child {
+    font-weight: bold;
+    width: 30%;
+  }
+  
+  .profile-footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #f7f7f7;
+    border-top: 1px solid #ddd;
+  }
+  
+  /* Add a card-like background image */
+  .profile-card {
+    background-image: linear-gradient(to bottom, #ffffff 0%, #f7f7f7 100%);
+    background-size: 100% 900px;
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+  }
+  
+  /* Add a card-like shadow effect */
+  .profile-card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Add a card-like border effect */
+  .profile-card {
+    border: 1px solid #cccccc;
+    border-top: 2px solid #cccccc;
+  }
+  
+  /* Add a card-like hover effect */
+  .profile-card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 0 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+</style>
+</head>
+<body>
+<div class="profile-card">
+    <div class="profile-header">
+      <img src="{{ user.photo.url }}" alt="Profile Photo" class="profile-photo">
+    </div>
+    <div class="profile-body">
+      <h1>Virtual Card</h1>
+      <table>
+        <tr>
+          <td>Name:</td>
+          <td>{{ user.username }}</td>
+        </tr>
+        <tr>
+          <td>Nominee Name:</td>
+          <td>{{ user.nominee_name }}</td>
+        </tr>
+        <tr>
+          <td>Mobile Number:</td>
+          <td>{{ user.mobile_number }}</td>
+        </tr>
+        <tr>
+          <td>DOB:</td>
+          <td>{{ user.dob }}</td>
+        </tr>
+        <tr>
+          <td>Age:</td>
+          <td>{{ user.age }}</td>
+        </tr>
+        <tr>
+          <td>Random ID:</td>
+          <td>{{ user.profile.random_id }}</td>
+        </tr>
+      </table>
+    </div>
+    <div class="profile-footer">
+      <!-- You can add any additional information or a QR code here -->
+    </div>
+  </div>
+</body>
